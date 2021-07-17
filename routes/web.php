@@ -24,3 +24,11 @@ Route::get('/', function () {
        return view('home');
 
 });
+
+Route::get('/register', function () {
+
+    return view('register');
+
+});
+
+Route::post('/user/register', 'UserController@register')->name('user-register');
