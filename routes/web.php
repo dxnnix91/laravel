@@ -11,20 +11,16 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('saludo/{nombre?}', function( $nombre = 'Invitado'){
     return 'Hola '. $nombre;
 });
 
-Route::get('/prueba/saludo', function () {
+Route::get('/', function () {
 
-    $usuario = array(
-        'nombre' => 'Daniel',
-        'apellido' => 'Basantes'
-    );
+       return view('home');
 
-    return view('prueba', $usuario);
 });
